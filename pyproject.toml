@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aecsf"
+version = "0.1.0"
+description = "JAX kernel of AECSF adaptive ensemble conditional score filtering (arXiv:2609.32411)"
+authors = [{ name = "Teddy Tennant", email = "teddytennant@icloud.com" }]
+requires-python = ">=3.10"
+dependencies = [
+    "jax>=0.4.20",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+tests = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
